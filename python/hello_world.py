@@ -1,0 +1,3 @@
+texto = "ola"
+
+print(texto)
