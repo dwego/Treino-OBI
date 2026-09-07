@@ -41,12 +41,17 @@ binary
 cadeia
 calculator
 main
+matriz
 prefix
 revisao
 sort
 teste
 two_pointers
+watermelon
 
 ### Python cache ###
 __pycache__/
 *.pyc
+
+### Unrelated local repository ###
+/portifolio-diego/
