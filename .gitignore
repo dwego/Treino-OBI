@@ -35,6 +35,7 @@ bin/
 .DS_Store
 
 ### Local compiled binaries ###
+/build/
 a.out
 bfs
 binary
