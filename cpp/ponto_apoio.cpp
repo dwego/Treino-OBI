@@ -2,10 +2,12 @@
 using namespace std;
 
 int N, K;
-constexpr int MAXN = 200000;
+constexpr int MAXN = 2e5;
 int cidades[MAXN];
 
 // K -> até D de distancia entre cidade[i] - cidade[i-1], cidades, total cidades: N
+
+// cidades = [1, 2, 3, 10, 11, 18, 22, 23]
 
 bool possible(int D) {
   int l = 0;
@@ -30,9 +32,11 @@ int main() {
     cin >> N >> K;
     for (int i = 0; i < N; i++) cin >> cidades[i];
 
-    int l = 0, r = 1e9+10;
+    // cidades = [1, 2, 3, 10, 11, 18, 22, 23], l = 1, r = 22, 11
+
+    int l = 0, r = cidades[N-1] - cidades[0];
     while (l < r) {
-      int d = (l + r)/2;
+      int d = (l + r)/2; // meio = 11
       if (!possible(d)) l = d+1;
       else r = d;
     }
